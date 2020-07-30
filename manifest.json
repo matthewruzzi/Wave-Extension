@@ -1,6 +1,6 @@
 {
   "manifest_version": 2,
-  "name": "Borderify",
+  "name": "Wave",
   "version": "1.0",
 
   "description": "Adds a red border to all webpages matching mozilla.org.",
@@ -11,8 +11,8 @@
 
   "content_scripts": [
     {
-      "matches": ["*://*.mozilla.org/*"],
-      "js": ["borderify.js"]
+      "matches": ["*://meet.google.com/**-**-**"],
+      "js": ["inject.js"]
     }
   ]
 }

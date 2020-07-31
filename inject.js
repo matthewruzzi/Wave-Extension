@@ -50,12 +50,29 @@ document.body.prepend(style); //*/
 
   </style>
 <div id="waveAppContainer">
-  <span class="waveButton">👋 </span>
+  <span class="waveButton" id="wave">👋 </span>
   <span class="waveButton" id="thumbsUp" >👍 </span>
-  <span class="waveButton" >👎</span>
+  <span class="waveButton" id="thumbsDown">👎</span>
+  <span class="waveButton" id="raiseHand">✋ Raise Hand</span>
  </div>
     `;
 
   document.body.appendChild(waveApp);
+  const waveButton = document.querySelector('#wave')
+  waveButton.addEventListener('click', function (e) {
+    alert("👋");
+  })
+  const thumbsUpButton = document.querySelector('#thumbsUp')
+  thumbsUpButton.addEventListener('click', function (e) {
+    alert("👍");
+  })
+  const thumbsDownButton = document.querySelector('#thumbsDown')
+  thumbsDownButton.addEventListener('click', function (e) {
+    alert("👎");
+  })
+  const raiseHandButton = document.querySelector('#raiseHand')
+  raiseHandButton.addEventListener('click', function (e) {
+    alert("✋");
+  })
 
 })();

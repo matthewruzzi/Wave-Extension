@@ -1,9 +1,9 @@
 {
   "manifest_version": 2,
   "name": "Wave",
-  "version": "1.0",
+  "version": "0.1",
 
-  "description": "Adds a red border to all webpages matching mozilla.org.",
+  "description": "Wave is a Firefox/Chrome compatible alternative to the Nod extension for Google meet, which is currently Chrome-only.",
 
   "icons": {
     "48": "Icon-48.png"
@@ -12,7 +12,8 @@
   "content_scripts": [
     {
       "matches": ["*://meet.google.com/**-**-**"],
-      "js": ["inject.js"]
+      "js": ["injector.js"]
     }
-  ]
+  ],
+  "web_accessible_resources": ["wave.js"]
 }

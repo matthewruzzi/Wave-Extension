@@ -1,8 +1,8 @@
-# 👋 Wave-Extension
+# 👋 Wave Extension for Google Meet
 
-Wave is a Firefox/Chrome compatible alternative to the [Nod extension for Google meet](https://chrome.google.com/webstore/detail/nod-reactions-for-google/oikgofeboedgfkaacpfepbfmgdalabej), which is currently Chrome-only.
+Wave is a Firefox/Chrome compatible alternative to the [Nod extension for Google meet](https://chrome.google.com/webstore/detail/nod-reactions-for-google/oikgofeboedgfkaacpfepbfmgdalabej), which is currently Chrome-only. It can be used in meetings with mobile participants because it sends the emoji as chat messages so other people in the meet don't need to have the extension installed to see them, and the Google Meet mobile app does not allow extensions. 
 
-###Comparison
+### Comparison
 
 |                                                                     | Nod     | Wave |
 | ------------------------------------------------------------------- | ------- | ---- |

@@ -2,20 +2,28 @@
   "manifest_version": 2,
   "name": "Wave",
   "version": "0.2",
-
   "description": "Wave is a Firefox/Chrome compatible alternative to the Nod extension for Google meet, which is currently Chrome-only.",
-
   "icons": {
     "48": "Icon-48.png",
     "16": "Icon-16.png",
     "128": "Icon-128.png"
   },
-
   "content_scripts": [
     {
-      "matches": ["*://meet.google.com/**-**-**"],
-      "js": ["injector.js"]
+      "matches": [
+        "*://meet.google.com/**-**-**"
+      ],
+      "js": [
+        "injector.js"
+      ]
     }
   ],
-  "web_accessible_resources": ["wave.js"]
+  "background": {
+    "scripts": [
+      "background.js"
+    ]
+  },
+  "web_accessible_resources": [
+    "wave.js"
+  ]
 }

@@ -1,4 +1,4 @@
-# 👋 Wave Extension for Google Meet
+# 👋 Wave - Reactions for Google Meet
 
 [![Mozilla Add-on](get-the-addon.png)](https://addons.mozilla.org/en-US/firefox/addon/wave-reactions-for-google-meet/?utm_source=github&utm_content=get_the_addon_badge) [![Mozilla Add-on Weekly Downloads Badge](https://img.shields.io/amo/dw/wave-reactions-for-google-meet)](https://addons.mozilla.org/en-US/firefox/addon/wave-reactions-for-google-meet/?utm_source=github&utm_content=weekly_downloads_badge)
 

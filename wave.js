@@ -1,15 +1,15 @@
 function sendEmoji(emoji) {
-  if (((document.querySelector("[aria-label='Send a message to everyone']")) == null)) {//Check if the sidebar is closed
+  if (((document.querySelector("[aria-label='Send a message to everyone']")) == null)) { //Check if the sidebar is closed
     document.querySelector("[aria-label='Chat with everyone']").click(); //Open chat sidebar
     document.querySelector("[aria-label='Send a message to everyone']").value = emoji;
-    document.querySelector("[data-tooltip='Send message']").removeAttribute("aria-disabled");
-    document.querySelector("[data-tooltip='Send message']").click();
+    document.querySelector(".VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd").removeAttribute("disabled");
+    document.querySelector(".VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd").click();
     // document.querySelector("[aria-label='Close']").click(); //Close chat sidebar
   }
   else {
     document.querySelector("[aria-label='Send a message to everyone']").value = emoji;
-    document.querySelector("[data-tooltip='Send message']").removeAttribute("aria-disabled");
-    document.querySelector("[data-tooltip='Send message']").click();
+    document.querySelector(".VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd").removeAttribute("disabled");
+    document.querySelector(".VfPpkd-Bz112c-LgbsSe.yHy1rc.eT1oJ.tWDL4c.Cs0vCd").click();
   }
 
 }
@@ -18,7 +18,14 @@ function sendEmoji(emoji) {
   while (document.querySelector(".d7iDfe") !== null) {
     await new Promise((r) => setTimeout(r, 500));
   }
-
+  var username;
+  if (localStorage.getItem('username')) {
+    username = localStorage.getItem('username');
+  } else {
+    username = prompt("What is your name?");
+    localStorage.setItem('username', username);
+  }
+  document.querySelector("[aria-label='Chat with everyone']").click();
   var waveApp = document.createElement("div");
   waveApp.innerHTML = `
   <style>#waveAppContainer {
@@ -80,9 +87,9 @@ function sendEmoji(emoji) {
   })
   const raiseHandButton = document.querySelector('#raiseHand')
   raiseHandButton.addEventListener('click', function (e) {
-    document.querySelector("[aria-label='Chat with everyone']").click(); //Open chat sidebar
-    //The following code that gets the users name will only work if the sidebar is open.
-    setTimeout(() => { sendEmoji("✋ " + document.querySelector(".cS7aqe.NkoVdd").innerHTML.match(/.*(?=\()/) + "raised their hand."); }, 500);
+    //document.querySelector("[aria-label='Chat with everyone']").click(); //Open chat sidebar
+    //The following code that gets the users name will only work if the sidebar was previously open.
+    setTimeout(() => { sendEmoji("✋ " + username + " raised their hand."); }, 500);
   })
 
 })();
